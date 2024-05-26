@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./styles.css";
 
 const dictionaryData = [
   { word: "React", meaning: "A JavaScript library for building user interfaces." },
@@ -18,7 +19,7 @@ const XDictionary = () => {
   };
 
   return (
-    <div>
+    <div className="dictionary-container">
       <h1>Dictionary App</h1>
       <div>
         <input
@@ -29,7 +30,7 @@ const XDictionary = () => {
         />
         <button onClick={handleSearch}>Search</button>
       </div>
-      <p>Definition:</p>
+      <p className="definition-label">Definition:</p>
       {searchResult !== "" && <p>{searchResult}</p>}
     </div>
   );
